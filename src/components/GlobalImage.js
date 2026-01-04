@@ -1,7 +1,7 @@
 function GlobalImage() {
   return (
     <div className="globalImage">
-      <img src="/multimedia-files/gironaGlobalEdit.png" alt="Some views of Girona" className="globalImage-img" />
+      <img src={process.env.PUBLIC_URL + "/multimedia-files/gironaGlobalEdit.png"} alt="Some views of Girona" className="globalImage-img" />
     </div>
   );
 }
