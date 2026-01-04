@@ -10,12 +10,12 @@ import Footer from './components/Footer';
 function App() {
 
   const products = [
-    { id: 1, name: "Girona's Cathedral", price: "10", quantity: 0, image: "/multimedia-files/catedral.jpg", link: "" },
-    { id: 2, name: "Girona's Wall", price: "5", quantity: 0, image: "/multimedia-files/muralla.jpg", link: "" },
-    { id: 3, name: "Montilivi Stadium", price: "0", quantity: 0, image: "/multimedia-files/estadiMontilivi.jpg", link: "https://www.gironafc.cat" },
-    { id: 4, name: "Walk in la Devesa", price: "0", quantity: 0, image: "/multimedia-files/devesa.jpg", link: "" },
-    { id: 5, name: "Banys Àrabs", price: "2", quantity: 0, image: "/multimedia-files/banysArabs.jpg", link: "" },
-    { id: 6, name: "Cinema's musuem", price: "7", quantity: 0, image: "/multimedia-files/cinema.jpg", link: "" }
+    { id: 1, name: "Girona's Cathedral", price: "10", quantity: 0, image: {process.env.PUBLIC_URL + "/multimedia-files/catedral.jpg"}, link: "" },
+    { id: 2, name: "Girona's Wall", price: "5", quantity: 0, image: {process.env.PUBLIC_URL + "/multimedia-files/muralla.jpg"}, link: "" },
+    { id: 3, name: "Montilivi Stadium", price: "0", quantity: 0, image: {process.env.PUBLIC_URL + "/multimedia-files/estadiMontilivi.jpg"}, link: "https://www.gironafc.cat" },
+    { id: 4, name: "Walk in la Devesa", price: "0", quantity: 0, image: {process.env.PUBLIC_URL + "/multimedia-files/devesa.jpg"}, link: "" },
+    { id: 5, name: "Banys Àrabs", price: "2", quantity: 0, image: {process.env.PUBLIC_URL + "/multimedia-files/banysArabs.jpg"}, link: "" },
+    { id: 6, name: "Cinema's musuem", price: "7", quantity: 0, image: {process.env.PUBLIC_URL + "/multimedia-files/cinema.jpg"}, link: "" }
   ];
 
   const [cartItems, setCartItems] = useState([]);
