@@ -1,38 +1,333 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Calibri', sans-serif;
+  background-color: lightgrey;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background-color: rgba(255, 0, 0, 0.833);
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.header-logo {
+  height: 100px;
+  margin-left: 35px;
+  margin-right: 25px;
+}
+
+.globalImage {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.globalImage-img {
+  padding: 20px;
+  width: 95%;
+  height: 95%;
+}
+
+.globalImage-text h2 {
+  font-size: 3rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* .css GlobalInfo */
+
+.globalInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding: 40px;
+  background-color: #f8f9fa;
+  margin: 40px;
+  margin-top: 20px;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.globalInfo h3 {
+  font-size: 2rem;
+  color: red;
+}
+
+.globalInfo-video {
+  flex: 2;
+  min-width: 300px;
+}
+
+.globalInfo-video video {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.globalInfo-audio {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.audio-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.audio-card audio {
+  width: 100%; 
+  margin: 15px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h3 {
+  color: #e63946;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.media-caption, .audio-desc {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .globalInfo {
+    flex-direction: column; 
+    padding: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* .css ActivitiesList */
+.activitiesList{
+  margin: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activitiesList h1 {
+  text-align: left;
+  margin-left: 20px;
+  width: 100%;
+  font-size: 2rem;
+  color: red;
+}
+
+.activitiesList-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px;
+  padding: 20px;
+}
+
+
+/* .css ActivityCard */
+
+  .activityCard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  height: 100%; 
+  border: 1px solid #eee;
+}
+
+
+.activityCard:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.activityCard img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+}
+
+
+.activityCard h3 {
+  font-size: 1rem;
+  margin: 15px 15px 5px;
+  color: #333;
+}
+
+.activityCard p {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: bold;
+  margin: 0 15px 15px;
+}
+
+.activityCard button {
+  margin: auto 15px 15px;
+  padding: 10px 20px;
+  background-color: red;
   color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: calc(100% - 30px);
 }
 
-.App-link {
-  color: #61dafb;
+.activityCard button:hover {
+  background-color: #d62839;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.activityCard button:active {
+  transform: scale(0.98);
+}
+
+.external-link {
+  display: inline-block;
+  margin: 0 15px 15px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.external-link:hover {
+  color: darkblue;
+}
+
+/* .css Card */
+.cart-section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #eee;
+}
+
+.cart-container h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #e63946;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.empty-msg {
+  color: #95a5a6;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.2s;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item:hover {
+  background-color: #fcfcfc;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.item-price {
+  color: #7f8c8d;
+  margin-left: 10px;
+  font-size: 0.9em;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.2s;
+  padding: 5px;
+}
+
+.btn-remove:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  color: #e74c3c;
+}
+
+.cart-footer {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.total-price {
+  color: #e63946;
+  font-size: 1.5rem;
+  margin-left: 15px;
+}
+
+/* css Footer */
+.footer {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 40px;
 }
